@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a0a0a">
+<title>Set up your AnswerDeck assistant</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='32' y='47' font-size='42' font-family='Arial' font-weight='900' text-anchor='middle' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e4e4e4;--g:#7a7a7a;--ink:#0a0a0a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,legend,.u{font-family:Unbounded,"Arial Black",system-ui,sans-serif;font-weight:900;line-height:1.05;letter-spacing:-.03em;margin:0}
+h1{font-size:clamp(32px,6vw,60px);margin-bottom:16px}
+a{color:inherit}a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:4px solid var(--g);outline-offset:3px}
+.wrap{max-width:900px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:20;background:rgba(228,228,228,.93);backdrop-filter:blur(8px);border-bottom:3px solid var(--ink)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}.logo{font:900 20px Unbounded,sans-serif;text-decoration:none}nav a:not(.logo){font-weight:600;text-decoration:none}
+.intro{padding:48px 0 24px}.intro p{max-width:56ch;margin:0 0 14px}
+.have{background:#fff;border:3px solid var(--ink);border-radius:20px;padding:18px 22px;margin:22px 0 0}.have b{display:block;margin-bottom:6px}.have ul{margin:0;padding-left:20px}
+fieldset{background:#fff;border:3px solid var(--ink);border-radius:24px;padding:24px;margin:0 0 22px;min-width:0}
+legend{font-size:clamp(18px,3vw,24px);padding:0 8px;margin-left:-8px}
+.sub{margin:4px 0 18px;opacity:.75;font-size:16px}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:16px}.g>*{min-width:0}.full{grid-column:1/-1}
+label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:16px}
+.hint{font-weight:400;font-size:14px;opacity:.7}
+input,select,textarea{width:100%;min-width:0;font:inherit;padding:12px;border-radius:12px;border:3px solid var(--ink);background:#fff;color:var(--ink)}
+textarea{min-height:96px;resize:vertical}
+label.ck{flex-direction:row;gap:12px;align-items:flex-start;font-weight:400;font-size:16px}label.ck input{width:24px;height:24px;flex:none;margin-top:2px;accent-color:var(--ink)}
+.warn{background:var(--bg);border-radius:12px;padding:12px 16px;font-size:15px;margin:0 0 16px}
+.pill{display:inline-block;background:var(--ink);color:#fff;font:600 18px "DM Sans",sans-serif;padding:15px 30px;border-radius:999px;text-decoration:none;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--g);cursor:pointer}
+.pill:disabled{opacity:.6;cursor:wait}
+#msg{font-weight:600;margin:16px 0 0}.hp{position:absolute;left:-9999px}
+.done{background:var(--ink);color:#fff;border-radius:24px;padding:32px;margin:30px 0 60px}.done h2{font-size:clamp(26px,4vw,40px);margin-bottom:14px}.done ol{padding-left:22px;margin:14px 0 0}.done li{margin:8px 0}.done a{color:#fff}
+footer{padding:30px 0 60px;font-size:15px;opacity:.8}
+@media (max-width:620px){.g{grid-template-columns:1fr}fieldset{padding:18px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main"><a class="logo" href="index.html">AnswerDeck</a><a href="index.html">Back to website</a></nav></div></header>
+<main class="wrap">
+<div class="intro">
+<h1>Let’s set up your assistant.</h1>
+<p class="intro">Thanks for subscribing. Tell us about your business and we’ll build your AnswerDeck assistant around it. It takes about 10 minutes, and we’ll be in touch within one business day.</p>
+<div class="have intro"><b>Have these handy</b><ul><li>Your opening hours and the services you offer</li><li>Any prices you’re happy for the assistant to say, such as a call-out fee</li><li>Your mobile number for urgent calls</li></ul></div>
+</div>
+
+<form id="f" action="https://formspree.io/f/xoeeazzv" method="POST">
+<input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input type="hidden" name="_subject" id="subj" value="New client onboarding">
+<input type="hidden" name="form_type" value="Client onboarding">
+
+<fieldset><legend>1. About you</legend><p class="sub">Fields marked * are required.</p>
+<div class="g">
+<label>Your name *<input name="owner_name" required autocomplete="name"></label>
+<label>Business name *<input name="business_name" id="bn" required autocomplete="organization"></label>
+<label>How should the assistant say your business name? *<span class="hint">For example, “Harbour City Plumbing”</span><input name="spoken_name" required></label>
+<label>Email *<input name="email" type="email" required autocomplete="email"></label>
+<label>Mobile for urgent calls *<span class="hint">Urgent calls are transferred here</span><input name="owner_mobile" type="tel" required autocomplete="tel"></label>
+<label>Business phone number *<span class="hint">The number your customers call</span><input name="business_phone" type="tel" required></label>
+<label>Phone provider<select name="carrier"><option value="">Not sure</option><option>Telstra</option><option>Optus</option><option>Vodafone</option><option>TPG / Other</option></select></label>
+<label>Type of business *<select name="industry" required><option value="">Choose one</option><option>Plumbing</option><option>HVAC</option><option>Towing</option><option>Locksmith</option><option>Roofing</option><option>Pest control</option><option>Dental / medical</option><option>Salon / barber</option><option>Auto repair</option><option>Law office</option><option>Other</option></select></label>
+<label class="full">Website<input name="website" type="url" placeholder="https://" autocomplete="url"></label>
+</div></fieldset>
+
+<fieldset><legend>2. Opening hours</legend>
+<div class="g">
+<label class="full">Your opening hours *<span class="hint">For example: Mon to Fri 7am to 5pm, Sat 8am to 12pm, closed Sunday</span><textarea name="hours" required></textarea></label>
+<label class="full">Calls outside those hours<select name="after_hours"><option>Take a booking for the next available time</option><option>Take a message only</option><option>Book normal jobs, and transfer urgent calls to me</option></select></label>
+</div></fieldset>
+
+<fieldset><legend>3. Your services</legend>
+<div class="g">
+<label class="full">What do you offer? *<textarea name="services" required></textarea></label>
+<label class="full">What do you NOT do?<span class="hint">So the assistant can politely decline</span><textarea name="not_offered"></textarea></label>
+<label class="full">Where do you work? *<span class="hint">Suburbs, postcodes or a radius</span><textarea name="service_area" required></textarea></label>
+<label class="full">Prices the assistant may say<span class="hint">For example: call-out fee $120. If you leave this blank, it will say a team member will confirm pricing. It never makes up prices.</span><textarea name="pricing"></textarea></label>
+</div></fieldset>
+
+<fieldset><legend>4. How calls should go</legend>
+<div class="g">
+<label class="full">What counts as urgent? *<span class="hint">For example: burst pipe, no hot water for elderly customers, gas smell</span><textarea name="urgent" required></textarea></label>
+<label class="full">Common questions and answers<span class="hint">Anything customers often ask</span><textarea name="faqs"></textarea></label>
+<label class="full">Anything the assistant must never say or do<textarea name="never"></textarea></label>
+<label>Tone<select name="tone"><option>Friendly</option><option>Professional</option><option>Relaxed</option></select></label>
+<label>Call recordings<select name="recording"><option>Record calls so I can review them</option><option>Don’t record calls</option></select></label>
+</div></fieldset>
+
+<fieldset><legend>5. Bookings</legend>
+<div class="g">
+<label>Which calendar do you use?<select name="calendar"><option>Google Calendar</option><option>Outlook</option><option>Apple Calendar</option><option>I don’t have one</option></select></label>
+<label>Email for that calendar<input name="calendar_email" type="email"></label>
+<label>Typical appointment length<select name="appt_length"><option>30 minutes</option><option selected>1 hour</option><option>2 hours</option><option>Half a day</option><option>It varies</option></select></label>
+<label class="full">Anything we should know about scheduling?<span class="hint">For example: no Fridays, leave time for travel</span><textarea name="scheduling"></textarea></label>
+</div></fieldset>
+
+<fieldset><legend>6. Confirm</legend>
+<p class="warn"><b>Please don’t enter passwords or card details in this form.</b> If we need access to your calendar, we’ll email you a safe way to connect it.</p>
+<div class="g">
+<label class="ck full"><input type="checkbox" name="confirm_details" value="yes" required><span>The details above are correct, and I’m allowed to set this up for my business.</span></label>
+<label class="ck full"><input type="checkbox" name="confirm_ai" value="yes" required><span>I understand the assistant tells callers it’s an AI, and calls may be recorded. I’ll agree the call notice wording with AnswerDeck before going live.</span></label>
+</div>
+<p style="margin:22px 0 0"><button class="pill" type="submit" id="sb">Send my details</button></p>
+<p id="msg" role="status"></p>
+</fieldset>
+</form>
+
+<section class="done" id="done" hidden tabindex="-1" aria-live="polite">
+<h2>Thanks, we’ve got it.</h2>
+<p>We’ll email you within one business day. Here’s what happens next:</p>
+<ol><li>We build your assistant from your details and test it.</li><li>We’ll ask you to connect your calendar, using a safe link.</li><li>We’ll show you how to forward your missed calls to your AnswerDeck number.</li><li>You try it, and we check your first calls with you.</li></ol>
+<p>Questions? Email <a href="mailto:ismoallim@gmail.com">ismoallim@gmail.com</a>.</p>
+</section>
+</main>
+<footer><div class="wrap">© 2026 AnswerDeck. <a href="index.html">Back to website</a></div></footer>
+<script>
+var f=document.getElementById('f'),m=document.getElementById('msg'),sb=document.getElementById('sb');
+f.addEventListener('submit',async function(e){e.preventDefault();
+document.getElementById('subj').value='New client onboarding: '+document.getElementById('bn').value.trim().slice(0,80);
+m.textContent='Sending…';sb.disabled=true;
+try{var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
+if(r.ok){f.hidden=true;document.querySelectorAll('.intro').forEach(function(x){x.hidden=true});var d=document.getElementById('done');d.hidden=false;d.focus();window.scrollTo(0,0)}
+else{m.textContent='Something went wrong, so nothing was sent. Please try again, or email ismoallim@gmail.com.'}}
+catch(x){m.textContent='No connection. Please try again. Your answers are still here.'}
+sb.disabled=false});
+</script>
+</body>
+</html>

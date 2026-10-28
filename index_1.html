@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+<title>AnswerDeck – Missed call? Not anymore.</title>
+<meta name="description" content="AnswerDeck answers your business calls when you can’t, books the job, and emails you the details. Try it free for 2 weeks.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AnswerDeck – Missed call? Not anymore.">
+<meta property="og:description" content="AI phone answering that books jobs for local businesses. Try it free for 2 weeks.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='32' y='47' font-size='42' font-family='Arial' font-weight='900' text-anchor='middle' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AnswerDeck", "email": "ismoallim@gmail.com", "description": "AI phone answering that books jobs for local businesses."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which phone number will customers call?", "acceptedAnswer": {"@type": "Answer", "text": "We confirm the phone number setup with you before you go live, and we can talk through options for your existing number."}}, {"@type": "Question", "name": "Does it say it’s an AI?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It introduces itself as an AI assistant and says so if asked."}}, {"@type": "Question", "name": "What if there’s an emergency?", "acceptedAnswer": {"@type": "Answer", "text": "You tell us what counts as urgent. Urgent calls are transferred to your phone, and if the transfer doesn’t connect, the caller’s details are taken and flagged. It only uses the information you give it and doesn’t give advice."}}, {"@type": "Question", "name": "How does the free trial work?", "acceptedAnswer": {"@type": "Answer", "text": "You get 2 weeks free on your real line. No subscription payment is taken during the trial. Keep it and you’re charged after; cancel before the trial ends and you pay nothing."}}, {"@type": "Question", "name": "Can I cancel?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Cancel any time before your next monthly payment. There’s no long-term contract."}}, {"@type": "Question", "name": "How do I pay?", "acceptedAnswer": {"@type": "Answer", "text": "Secure checkout by Stripe, using major credit and debit cards. Prices are in Australian dollars."}}, {"@type": "Question", "name": "Are calls recorded?", "acceptedAnswer": {"@type": "Answer", "text": "Calls can be recorded so you can review them. We’ll agree the call notice wording with you, and you can ask for recordings to be turned off."}}, {"@type": "Question", "name": "What does it do if it doesn’t know the answer?", "acceptedAnswer": {"@type": "Answer", "text": "It only uses the details you give us. If a caller asks something it doesn’t know, it takes a message and tells them you’ll call back. It never makes up prices or promises."}}, {"@type": "Question", "name": "How long does setup take?", "acceptedAnswer": {"@type": "Answer", "text": "We build it around your hours, services and FAQs, then test it on your line before it goes live. We’ll confirm the timing with you when you sign up."}}]}</script>
+<style>
+:root{--bg:#e4e4e4;--g:#7a7a7a;--ink:#0a0a0a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.u{font-family:Unbounded,"Arial Black",system-ui,sans-serif;font-weight:900;line-height:1;margin:0;letter-spacing:-.03em}
+h2{font-size:clamp(28px,5vw,52px);margin-bottom:14px}
+a{color:inherit}
+a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{outline:4px solid var(--g);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:8px;background:#fff;color:var(--ink);padding:10px 16px;border-radius:8px;z-index:50}.skip:focus{left:8px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}.sec{padding:80px 0}.dk{background:var(--ink);color:#fff}.wh{background:#fff}
+.lead{max-width:54ch;margin:0 0 34px;opacity:.8}.sm{font-size:14px;opacity:.7}
+header{position:sticky;top:0;z-index:20;background:rgba(228,228,228,.93);backdrop-filter:blur(8px);border-bottom:3px solid var(--ink)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font:900 20px Unbounded,sans-serif;text-decoration:none}.links{display:flex;gap:22px;align-items:center}.links a:not(.pill){font-weight:600;text-decoration:none}
+.pill{display:inline-block;background:var(--ink);color:#fff;font:600 17px "DM Sans",sans-serif;padding:13px 24px;border-radius:999px;text-decoration:none;border:3px solid var(--ink);box-shadow:4px 4px 0 #fff;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.pill:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 #fff}
+.pill.o{background:transparent;color:var(--ink);box-shadow:none}.dk .pill,.hot .pill{background:#fff;color:var(--ink);border-color:#fff;box-shadow:4px 4px 0 var(--g)}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:56px 0 64px}
+.hero h1{font-size:clamp(42px,8.6vw,104px)}.miss{display:block;color:var(--g);text-decoration:line-through;text-decoration-thickness:.09em}
+.hero p{font-size:20px;max-width:40ch;margin:24px 0 28px}.hero p.sm{font-size:14px;margin:16px 0 0}
+.phone{background:#fff;color:var(--ink);border:4px solid var(--ink);border-radius:28px;padding:18px;box-shadow:10px 10px 0 var(--ink);max-width:380px;width:100%;justify-self:center}
+.hero .phone{transform:rotate(3deg)}
+.bar{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:10px}.bar b{color:#0a8a4b}
+.m{font-size:14px;padding:8px 12px;border-radius:14px;margin:7px 0;max-width:92%}
+.m.a{background:#ececec}.m.c{background:var(--ink);color:#fff;margin-left:auto}
+.tag{margin-top:10px;background:var(--ink);color:#fff;border-radius:10px;padding:8px 10px;font-weight:600;font-size:14px}
+.anim .m,.anim .tag{opacity:0;animation:in .4s forwards}
+.anim .m:nth-of-type(1){animation-delay:.4s}.anim .m:nth-of-type(2){animation-delay:1.4s}.anim .m:nth-of-type(3){animation-delay:2.4s}.anim .tag{animation-delay:3.4s}
+@keyframes in{to{opacity:1}}@media (prefers-reduced-motion:reduce){.anim .m,.anim .tag{animation:none;opacity:1}html{scroll-behavior:auto}}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center;padding:30px 0}
+.trust b{display:block;font:900 clamp(15px,2vw,19px)/1.2 Unbounded,sans-serif}.trust span{font-size:14px;opacity:.7}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.t{background:#fff;border:3px solid var(--ink);border-radius:22px;padding:24px}.t h3{font-size:19px;margin-bottom:8px}.t p{margin:0;font-size:16px;opacity:.8}
+.t.k{background:var(--ink);color:#fff;grid-column:span 2;grid-row:span 2;display:flex;flex-direction:column;justify-content:flex-end;min-height:280px}
+.t.k .big{font:900 clamp(64px,10vw,120px)/.9 Unbounded,sans-serif;margin-bottom:14px}.t.k h3{font-size:24px}
+.t.w{grid-column:span 2}.st{display:flex;gap:10px;margin-bottom:12px}.st div{flex:1;background:var(--bg);border-radius:12px;padding:10px}.st b{display:block;font:900 26px Unbounded,sans-serif}.st span{font-size:13px}
+.cl{display:flex;justify-content:space-between;gap:10px;border-top:2px solid var(--ink);padding:8px 0;font-size:14px}.cl i{font-style:normal;font-weight:600}.t .note{font-size:12px;margin-top:8px;opacity:.7}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.tab{font:600 16px "DM Sans",sans-serif;padding:10px 18px;border:3px solid var(--ink);border-radius:999px;background:#fff;color:var(--ink);cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--ink);color:#fff}
+.pnl{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.pnl h3{font-size:clamp(22px,3vw,32px);margin-bottom:12px}.pnl p{margin:0 0 12px;max-width:44ch}
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none;margin:48px 0 0}.chips li{background:var(--bg);border:3px solid var(--ink);border-radius:999px;padding:6px 16px;font-weight:600;font-size:16px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{counter-increment:s;border:3px solid #fff;border-radius:22px;padding:24px}.step::before{content:counter(s);font:900 44px Unbounded,sans-serif;display:block;margin-bottom:12px}
+.step h3{font-size:20px;margin-bottom:8px}.step p{margin:0;font-size:16px;opacity:.8}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.mail{background:#fff;border:4px solid var(--ink);border-radius:20px;box-shadow:10px 10px 0 var(--g);overflow:hidden;max-width:520px;width:100%;justify-self:center}
+.mail .h{background:var(--ink);color:#fff;padding:14px 18px;font-weight:600;font-size:15px}.mail .h small{display:block;font-weight:400;opacity:.7}
+.mail dl{margin:0;padding:16px 18px;display:grid;grid-template-columns:90px 1fr;gap:8px 12px;font-size:15px}.mail dt{font-weight:600}.mail dd{margin:0}.mail .f{padding:0 18px 14px;font-size:12px;opacity:.7}
+.roi{display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
+.ctl{display:grid;gap:22px}.ctl label{display:block;font-weight:600}.ctl output{float:right;font:900 18px Unbounded,sans-serif}
+input[type=range]{width:100%;accent-color:var(--ink);margin-top:10px;height:28px}
+.res{background:var(--ink);color:#fff;border-radius:22px;padding:28px;display:flex;flex-direction:column;justify-content:center}
+.res .n{font:900 clamp(40px,7vw,64px)/1 Unbounded,sans-serif;margin:8px 0}.res p{margin:0 0 8px}
+.tw{overflow-x:auto;border:3px solid var(--ink);border-radius:22px;background:#fff}
+table{border-collapse:collapse;width:100%;min-width:620px}th,td{padding:14px 18px;text-align:left;border-bottom:2px solid var(--ink);font-size:16px;vertical-align:top}
+tr:last-child td,tr:last-child th{border-bottom:0}thead th{font:900 16px Unbounded,sans-serif;letter-spacing:-.02em}
+.us{background:var(--ink);color:#fff}
+.hn{display:grid;grid-template-columns:1fr 1fr;gap:20px}.hn .t ul{margin:10px 0 0;padding-left:20px}.hn .t li{margin:6px 0;font-size:16px}
+.tst{display:grid;grid-template-columns:1fr 1fr;gap:18px}.tc{border:3px dashed var(--ink);border-radius:22px;padding:26px}.tc p{margin:0 0 16px}
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0;margin:0 0 34px;list-style:none;counter-reset:z}
+.tl li{counter-increment:z;border-top:4px solid var(--ink);padding-top:10px;font-size:16px}.tl li::before{content:"Step " counter(z);display:block;font:900 13px Unbounded,sans-serif;margin-bottom:4px}
+.cards{display:grid;grid-template-columns:1.2fr 1fr;gap:26px}.card{background:#fff;border:4px solid var(--ink);border-radius:26px;padding:30px}
+.card.hot{background:var(--ink);color:#fff;box-shadow:10px 10px 0 var(--g)}.amt{font:900 clamp(44px,7vw,72px) Unbounded,sans-serif;letter-spacing:-.04em;margin:10px 0}.amt small{font-size:18px;font-weight:600;letter-spacing:0}
+.card ul{margin:10px 0 22px;padding-left:20px}.card p{margin:0}
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+details{border-top:3px solid var(--ink);padding:16px 0}details:last-of-type{border-bottom:3px solid var(--ink)}
+summary{font-weight:600;font-size:19px;cursor:pointer}details p{margin:10px 0 0;max-width:62ch}
+.demo{display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap}.demo a.n{font:900 clamp(30px,6vw,56px) Unbounded,sans-serif;text-decoration:none}
+.su{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}.su p{font-size:20px;max-width:36ch}
+#f{background:#fff;color:var(--ink);border:4px solid #fff;border-radius:24px;padding:24px;display:grid;gap:14px;box-shadow:10px 10px 0 var(--g)}
+label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:15px}
+input,select{width:100%;min-width:0;font:inherit;padding:13px;border-radius:12px;border:3px solid var(--ink);background:#fff;color:var(--ink)}
+label.ck{flex-direction:row;gap:10px;align-items:flex-start;font-weight:400;font-size:14px}label.ck input{width:22px;height:22px;flex:none;margin-top:2px;accent-color:var(--ink)}
+#f .pill{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:4px 4px 0 var(--g);justify-self:start}#f .pill:disabled{opacity:.6;cursor:wait}
+#msg{margin:0;font-weight:600;font-size:16px}.hp{position:absolute;left:-9999px}
+footer{background:#1a1a1a;color:#bbb;padding:50px 0 100px;font-size:15px}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:28px;margin-bottom:26px}footer b{color:#fff;display:block;margin-bottom:8px}footer a{display:block;text-decoration:none;margin:4px 0}footer a:hover{color:#fff}
+footer details{border-color:#444}footer summary{font-size:15px}
+.bar2{display:none;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--ink);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+.bar2 .pill{display:block;text-align:center;background:#fff;color:var(--ink);border-color:#fff;box-shadow:none}
+@media (max-width:860px){.hero,.faq,.su,.cards,.tst,.two,.roi,.hn{grid-template-columns:1fr}.steps,.trust,.fg,.tl{grid-template-columns:1fr 1fr}.bento{grid-template-columns:1fr 1fr}.t.k,.t.w{grid-column:span 2}.t.k{grid-row:auto;min-height:200px}.hero .phone{transform:rotate(2deg)}}
+@media (max-width:620px){.links a:not(.pill){display:none}.steps,.bento,.tl{grid-template-columns:1fr}.t.k,.t.w{grid-column:auto}.bar2{display:block}.sec{padding:60px 0}}
+
+.fg>*{min-width:0;overflow-wrap:anywhere}
+.hero>*,.su>*,.two>*,.roi>*,.faq>*,.cards>*,.hn>*,.tst>*,.try>*{min-width:0}
+.res .pill{display:block;text-align:center;background:#fff;color:var(--ink);border-color:#fff;box-shadow:4px 4px 0 var(--g)}
+.try{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}.try .phone{max-width:480px;justify-self:start}
+#log{max-height:330px;overflow-y:auto;padding-right:4px}#log .tag{margin-bottom:6px}
+.opts{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.opt{font:600 15px "DM Sans",sans-serif;padding:10px 14px;border:3px solid var(--ink);border-radius:14px;background:#fff;color:var(--ink);text-align:left;cursor:pointer}.opt:hover{background:var(--bg)}
+a.opt{text-decoration:none;display:block}.opt.pr{background:var(--ink);color:#fff}
+.nm{display:flex;gap:8px;align-items:center;margin-top:12px}.nm input{flex:1;min-width:0;padding:10px 12px}.nm .pill{padding:10px 16px;box-shadow:none}.sr{position:absolute;left:-9999px}
+.ph{border:3px dashed var(--ink);border-radius:20px;padding:30px;text-align:center;opacity:.7;margin:0;min-height:200px;display:flex;align-items:center;justify-content:center}
+.mail.pop{animation:in .5s forwards}
+audio{width:100%;max-width:420px;margin-top:14px}
+@media (max-width:860px){.try{grid-template-columns:1fr}.try .phone{max-width:none;justify-self:stretch}}
+@media (max-width:620px){.hero .phone{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap"><nav aria-label="Main"><a class="logo" href="#top">AnswerDeck</a><div class="links"><a href="#features">Features</a><a href="#try">Try it</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="pill" href="#signup">Free trial</a></div></nav></div></header>
+
+<main id="main">
+<div id="top" class="wrap hero">
+<div>
+<h1><span class="miss">Missed call.</span>Answered.</h1>
+<p>AnswerDeck picks up your phone when you’re under a sink, on a roof, or asleep. It books the job and emails you the details.</p>
+<div class="btns"><a class="pill" href="#signup">Try it free for 2 weeks</a><a class="pill o" href="#try">Try a sample call</a></div>
+<p class="sm">No lock-in contract. Cancel any time.</p>
+</div>
+<div class="phone anim" aria-label="Example call">
+<div class="bar"><span>9:47 PM</span><b>Answered</b></div>
+<div class="m c">My water heater is leaking.</div>
+<div class="m a">Sorry about that. I can book someone for tomorrow at 8 AM. Does that work?</div>
+<div class="m c">Yes please.</div>
+<div class="tag">Booked. Owner emailed.</div>
+</div>
+</div>
+
+<div class="wh"><div class="wrap trust">
+<div><b>14 days free</b><span>No lock-in</span></div><div><b>24/7</b><span>Nights and weekends</span></div><div><b>Stripe payments</b><span>Secure checkout</span></div><div><b>Says it’s an AI</b><span>Honest on every call</span></div>
+</div></div>
+
+<section class="sec" id="features"><div class="wrap">
+<h2>What you get.</h2><p class="lead">Everything a good receptionist does, without the wage.</p>
+<div class="bento">
+<div class="t k"><div class="big">24/7</div><h3>Answers every call</h3><p>Nights, weekends, and while you’re on the tools.</p></div>
+<div class="t"><h3>Books jobs</h3><p>Checks your calendar and books a real time. Works with Cal.com calendars.</p></div>
+<div class="t"><h3>Email summaries</h3><p>Name, number, and issue after every call.</p></div>
+<div class="t w"><div class="st"><div><b>48</b><span>Answered</span></div><div><b>17</b><span>Booked</span></div><div><b>0</b><span>Missed</span></div></div>
+<div class="cl"><span>Leaking heater, 8 AM</span><i>Booked</i></div><div class="cl"><span>Blocked drain, quote</span><i>Booked</i></div><p class="note">Illustrative example with sample numbers.</p></div>
+<div class="t w"><h3>Urgent calls go straight to you</h3><p>You tell us what counts as urgent. We transfer those calls to your phone.</p></div>
+<div class="t w"><h3>Set up for you</h3><p>We build it around your hours, services, and FAQs, then fix it as you go.</p></div>
+</div></div></section>
+
+<section class="sec wh" id="try"><div class="wrap">
+<h2>Try it yourself.</h2><p class="lead">Play the caller. Pick a trade, choose what you’d say, and watch the call turn into a booking and an email. This is a scripted example of the experience. Nothing you type is saved or sent.</p>
+<div class="tabs" role="group" aria-label="Choose a trade" id="tabs"></div>
+<div class="try">
+<div class="phone" aria-label="Interactive example call"><div class="bar"><span id="biz"></span><b>Example call</b></div><div id="log" aria-live="polite"></div><div id="ctl" class="opts"></div></div>
+<div id="out" aria-live="polite"></div>
+</div>
+<ul class="chips" aria-label="Also works for"><li>Roofers</li><li>HVAC</li><li>Pest control</li><li>Med spas</li><li>Barbers</li><li>Auto repair</li><li>And more</li></ul>
+</div></section>
+
+<section class="sec dk" id="how"><div class="wrap">
+<h2>How it works.</h2><p class="lead">We set it up for you.</p>
+<div class="steps">
+<div class="step"><h3>Customer calls you</h3><p>You’re busy. The phone rings out.</p></div>
+<div class="step"><h3>AnswerDeck picks up</h3><p>It uses the details you give it: your hours, services, and FAQs.</p></div>
+<div class="step"><h3>The job gets booked</h3><p>It checks your calendar and books a real slot.</p></div>
+<div class="step"><h3>You get an email</h3><p>Name, number, and what’s wrong.</p></div>
+</div></div></section>
+
+
+
+<section class="sec wh" id="calc"><div class="wrap">
+<h2>What are missed calls costing you?</h2><p class="lead">Move the sliders to your own numbers. It’s an estimate, not a promise. All amounts are in Australian dollars (AUD).</p>
+<div class="roi">
+<div class="ctl">
+<div><label for="calls">Calls you miss each week <output id="o1">10</output></label><input type="range" id="calls" min="1" max="50" value="10"></div>
+<div><label for="jv">Average value of a job (AUD) <output id="o2">$400</output></label><input type="range" id="jv" min="50" max="5000" step="50" value="400"></div>
+<div><label for="cr">Callers who would have booked <output id="o3">25%</output></label><input type="range" id="cr" min="5" max="80" step="5" value="25"></div>
+</div>
+<div class="res" aria-live="polite"><p>Estimated work lost each month</p><div class="n" id="lost">$0</div><p id="verdict"></p><p class="sm" style="color:#fff">Based on the numbers you entered. AnswerDeck costs $299/month.</p><a class="pill" href="#signup" style="margin-top:14px;text-align:center">Try it free for 2 weeks</a></div>
+</div></div></section>
+
+<section class="sec" id="compare"><div class="wrap">
+<h2>Voicemail, a receptionist, or AnswerDeck.</h2><p class="lead">How the options compare for a small business.</p>
+<div class="tw"><table>
+<caption class="sm" style="text-align:left;padding:10px 18px;caption-side:bottom">General comparison. Receptionist costs vary by location and hours.</caption>
+<thead><tr><th scope="col"></th><th scope="col">Voicemail</th><th scope="col">Human receptionist</th><th scope="col" class="us">AnswerDeck</th></tr></thead>
+<tbody>
+<tr><th scope="row">Answers at night and weekends</th><td>No</td><td>Usually not</td><td class="us">Yes</td></tr>
+<tr><th scope="row">Books the job</th><td>No, caller waits</td><td>Yes</td><td class="us">Yes, into your calendar</td></tr>
+<tr><th scope="row">Handles two calls at once</th><td>No</td><td>No</td><td class="us">Yes</td></tr>
+<tr><th scope="row">Covers sick days and holidays</th><td>Yes</td><td>Not always</td><td class="us">Yes</td></tr>
+<tr><th scope="row">Cost</th><td>Free, but callers often ring someone else</td><td>A wage, typically thousands per month</td><td class="us">$299/month</td></tr>
+</tbody></table></div>
+</div></section>
+
+<section class="sec wh"><div class="wrap">
+<h2>Honest about what it does.</h2><p class="lead">It’s built to take calls and book jobs, and to stay inside the lines.</p>
+<div class="hn">
+<div class="t"><h3>What it does</h3><ul><li>Answers using your hours, services and FAQs</li><li>Books into your calendar</li><li>Takes a message when it can’t help</li><li>Transfers urgent calls to you</li><li>Tells callers it’s an AI</li></ul></div>
+<div class="t"><h3>What it won’t do</h3><ul><li>Quote prices you haven’t approved</li><li>Give medical, legal or technical advice</li><li>Promise arrival times or outcomes</li><li>Pretend to be a person</li><li>Make things up</li></ul></div>
+</div></div></section>
+
+<section class="sec" id="reviews"><div class="wrap">
+<h2>Early customers.</h2><p class="lead">We’re onboarding our first businesses now. Real reviews will go here.</p>
+<div class="tst"><div class="tc"><p>Your result could be here: calls caught, jobs booked, hours saved.</p><a class="pill" href="#signup">Join the free trial</a></div><div class="tc"><p>Be one of our first customers and tell us how it goes.</p><a class="pill o" href="#contact">Get in touch</a></div></div>
+</div></section>
+
+<section class="sec wh" id="pricing"><div class="wrap">
+<h2>One lost job costs more than this.</h2><p class="lead">Simple pricing. All prices are in Australian dollars (AUD). No lock-in contract.</p>
+<ol class="tl"><li>Subscribe or sign up below</li><li>Tell us about your business</li><li>We build and test it</li><li>Free for 14 days, then keep it or cancel</li></ol>
+<div class="cards">
+<div class="card hot"><h3>Monthly</h3><div class="amt">$299<small> /month</small></div><ul><li>Answers calls 24/7</li><li>Books appointments</li><li>Email summary after every call</li><li>Transfers emergencies to you</li></ul><a class="pill" href="https://buy.stripe.com/4gM6oG38c3vs1S40MYf7i01">Subscribe $299/month</a><p class="sm" style="color:#fff;margin-top:14px">A card is needed to start. It’s only charged after the 14-day free trial ends.</p></div>
+<div class="card"><h3>Setup</h3><div class="amt">$500<small> once</small></div><ul><li>Built for your business</li><li>Calendar connected</li><li>Tested before it goes live</li></ul><p><b>Pay after your free trial.</b> We’ll send your secure payment link once your trial is running.</p></div>
+</div>
+<p style="margin:26px 0 0"><a href="onboarding.html"><b>Already subscribed? Complete your business setup &rarr;</b></a></p>
+</div></section>
+
+<section class="sec" id="faq"><div class="wrap faq">
+<div><h2>Questions, answered.</h2></div>
+<div>
+<details><summary>Which phone number will customers call?</summary><p>We confirm the phone number setup with you before you go live, and we can talk through options for your existing number.</p></details>
+<details><summary>Does it say it’s an AI?</summary><p>Yes. It introduces itself as an AI assistant and says so if asked.</p></details>
+<details><summary>What if there’s an emergency?</summary><p>You tell us what counts as urgent. Urgent calls are transferred to your phone, and if the transfer doesn’t connect, the caller’s details are taken and flagged. It only uses the information you give it and doesn’t give advice.</p></details>
+<details><summary>How does the free trial work?</summary><p>You get 2 weeks free on your real line. No subscription payment is taken during the trial. Keep it and you’re charged after; cancel before the trial ends and you pay nothing.</p></details>
+<details><summary>Can I cancel?</summary><p>Yes. Cancel any time before your next monthly payment. There’s no long-term contract.</p></details>
+<details><summary>How do I pay?</summary><p>Secure checkout by Stripe, using major credit and debit cards. Prices are in Australian dollars.</p></details>
+<details><summary>Are calls recorded?</summary><p>Calls can be recorded so you can review them. We’ll agree the call notice wording with you, and you can ask for recordings to be turned off.</p></details>
+<details><summary>What does it do if it doesn’t know the answer?</summary><p>It only uses the details you give us. If a caller asks something it doesn’t know, it takes a message and tells them you’ll call back. It never makes up prices or promises.</p></details>
+<details><summary>How long does setup take?</summary><p>We build it around your hours, services and FAQs, then test it on your line before it goes live. We’ll confirm the timing with you when you sign up.</p></details>
+</div></div></section>
+
+<section class="sec wh" id="demo" hidden><div class="wrap demo">
+<div><h2 id="dh">Hear it yourself.</h2><p class="lead" id="dp" style="margin:0"></p><audio id="demoAudio" controls preload="none" hidden></audio></div>
+<a class="n" id="demoLink" href="#" hidden></a>
+</div></section>
+
+<section class="sec dk" id="signup"><div class="wrap su">
+<div><h2>Ready to stop missing calls?</h2><p>Start your free 2 weeks. Fill this in and we’ll set up your AnswerDeck line and a demo you can call yourself.</p></div>
+<form id="f" action="https://formspree.io/f/xoeeazzv" method="POST">
+<input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input type="hidden" name="_subject" value="New AnswerDeck trial signup">
+<label>Your name<input name="name" required autocomplete="name"></label>
+<label>Business name<input name="business" required></label>
+<label>Email<input name="email" type="email" required autocomplete="email"></label>
+<label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+<label>Type of business<select name="type"><option>Plumbing</option><option>HVAC</option><option>Towing</option><option>Locksmith</option><option>Roofing</option><option>Dental / medical</option><option>Salon / barber</option><option>Law office</option><option>Other</option></select></label>
+<label>Calls you miss each week<select name="missed_calls"><option>Not sure</option><option>Fewer than 5</option><option>5 to 10</option><option>10 to 20</option><option>More than 20</option></select></label>
+<label class="ck"><input type="checkbox" name="consent" value="yes" required><span>I’m happy for AnswerDeck to contact me about my free trial.</span></label>
+<button class="pill" type="submit" id="sb">Start my free trial</button>
+<p id="msg" role="status"></p>
+</form>
+</div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+<div class="fg">
+<div><b class="u" style="font-size:20px">AnswerDeck</b>AI phone answering that books jobs for local businesses.</div>
+<div><b>Product</b><a href="#features">Features</a><a href="#try">Try it</a><a href="#calc">Calculator</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div>
+<div><b>Company</b><a href="#reviews">Early customers</a><a href="#signup">Free trial</a><a href="onboarding.html">Client setup</a></div>
+<div><b>Contact</b><a href="mailto:ismoallim@gmail.com">ismoallim@gmail.com</a>We reply within one business day.</div>
+</div>
+<details id="terms"><summary>Terms of service</summary><p>AnswerDeck provides AI call answering and appointment booking. The monthly fee is billed in advance and can be cancelled before the next billing date. The setup fee is charged once after the free trial. You are responsible for following the laws that apply to your business, including call-recording and AI-disclosure rules. AnswerDeck does not guarantee bookings or revenue.</p></details>
+<details id="privacy"><summary>Privacy policy</summary><p>We collect the details you enter in the signup form and the call information needed to run the service (such as caller names, numbers, and messages). We use it only to provide AnswerDeck to you. We do not sell your data. Payments are handled by Stripe, and we never see your card number. Email us to access or delete your data.</p></details>
+<p style="margin:24px 0 0">© 2026 AnswerDeck. AnswerDeck is an AI assistant and says so on every call. Payments by Stripe.</p>
+</div></footer>
+
+<div class="bar2" id="bar2"><a class="pill" href="#signup">Start your free 2 weeks</a></div>
+<script>
+// Put your demo phone number here (for example "+61 2 1234 5678") to show the "Hear it yourself" section.
+var DEMO_NUMBER="";
+// To add a recorded demo call, upload the audio file (for example demo.mp3) next to index.html and put its name here.
+var DEMO_AUDIO="";
+
+var $=function(i){return document.getElementById(i)};
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function cap(t){return t.charAt(0).toUpperCase()+t.slice(1)}
+
+var S={
+plumbing:{n:"Plumbing",biz:"Example Plumbing",r:[["I have a leak","Sorry to hear that. I’ll get a plumber booked.","Leak"],["My drain is blocked","No problem. I’ll get that booked for you.","Blocked drain"],["I’d like a quote","Happy to help. A plumber confirms exact pricing on site, so I’ll book a visit.","Quote request"]],t:["tomorrow at 8 AM","tomorrow at 10 AM"],ok:"You’re booked for {t}. I’ve passed your details to the team.",sub:"New booking",k:"Booked",tag:"Booked. Owner emailed."},
+locksmith:{n:"Locksmith",biz:"Example Locksmiths",r:[["I’m locked out of my home","No problem. If a child or pet is locked inside, please call 000 first. Otherwise I can book someone now.","Home lockout"],["I’m locked out of my car","No problem. If anyone is in danger, please call 000 first. Otherwise I’ll get someone booked.","Car lockout"],["I need a lock changed","Happy to help. I’ll book a visit.","Lock change"]],t:["as soon as possible","this afternoon"],ok:"You’re booked for {t}. I’ve passed your details to the team.",sub:"New booking",k:"Booked",tag:"Booked. Owner emailed."},
+dental:{n:"Dental",biz:"Example Dental",r:[["I’d like a check-up","Happy to help. I’ll find you a time.","Check-up"],["I have a toothache","Sorry to hear that. I can’t give medical advice, but I can book you in. If it’s severe, or you have swelling or trouble breathing, please call 000.","Toothache"],["I’m asking about whitening","Happy to help. I’ll book you a consultation.","Whitening consult"]],t:["Thursday at 10:30 AM","Friday at 9 AM"],ok:"You’re booked for {t}. I’ve passed your details to reception.",sub:"New booking",k:"Booked",tag:"Booked. Reception emailed."},
+law:{n:"Law office",biz:"Example Law",r:[["I was in a car accident","I’m sorry to hear that. I can’t give legal advice, but I can arrange a callback from a lawyer.","Car accident"],["I need help with a will","Happy to help. I can’t give legal advice, but I can arrange a callback from a lawyer.","Will enquiry"],["I have a dispute with a neighbour","I’m sorry to hear that. I can’t give legal advice, but I can arrange a callback from a lawyer.","Neighbour dispute"]],t:["tomorrow morning","tomorrow afternoon"],ok:"A lawyer will call you {t}. I’ve passed your details on.",sub:"New callback request",k:"Callback",tag:"Callback arranged. Owner emailed."}
+};
+var tabs=$('tabs'),logEl=$('log'),ctl=$('ctl'),out=$('out'),key='plumbing',st={},run=0;
+var PH='<p class="ph">Your booking email will appear here after the call.</p>';
+function bub(w,t){var d=document.createElement('div');d.className='m '+w;d.textContent=t;logEl.appendChild(d);logEl.scrollTop=logEl.scrollHeight;return d}
+function say(t,cb,ms){var id=run,d=bub('a','…');setTimeout(function(){if(id!==run)return;d.textContent=t;logEl.scrollTop=logEl.scrollHeight;if(cb)cb()},ms||700)}
+function opts(list,fn){ctl.innerHTML='';list.forEach(function(x){var b=document.createElement('button');b.type='button';b.className='opt';b.textContent=cap(x);b.onclick=function(){fn(x)};ctl.appendChild(b)})}
+function start(k){run++;key=k;st={};var s=S[k];logEl.innerHTML='';ctl.innerHTML='';out.innerHTML=PH;$('biz').textContent=s.biz;
+Array.prototype.forEach.call(tabs.children,function(b){b.setAttribute('aria-pressed',b.dataset.k===k)});
+say('Thanks for calling '+s.biz+', this is their virtual assistant. How can I help?',function(){opts(s.r.map(function(r){return r[0]}),pickReason)},500)}
+function pickReason(x){var s=S[key],r=s.r.filter(function(q){return q[0]===x})[0];st.issue=r[2];ctl.innerHTML='';bub('c',x);say(r[1]+' When suits you?',function(){opts(s.t,pickTime)})}
+function pickTime(t){st.time=t;ctl.innerHTML='';bub('c',cap(t));say('Great. What’s your first name?',askName)}
+function askName(){ctl.innerHTML='<form class="nm" id="nf"><label class="sr" for="nm">Your first name</label><input id="nm" maxlength="30" autocomplete="off" placeholder="Type your first name"><button class="pill" type="submit">Send</button></form>';
+$('nf').onsubmit=function(e){e.preventDefault();finish($('nm').value.trim().slice(0,30)||'Sam')}}
+function finish(name){var s=S[key];ctl.innerHTML='';bub('c',name);
+say('Thanks, '+name+'. '+s.ok.replace('{t}',st.time)+' Is there anything else?',function(){
+var g=document.createElement('div');g.className='tag';g.textContent=s.tag;logEl.appendChild(g);logEl.scrollTop=logEl.scrollHeight;
+out.innerHTML='<div class="mail pop"><div class="h">'+esc(s.sub)+': '+esc(st.issue)+'<small>From AnswerDeck. Example business: '+esc(s.biz)+'</small></div><dl><dt>Caller</dt><dd>'+esc(name)+'</dd><dt>Phone</dt><dd>Taken from the call</dd><dt>Issue</dt><dd>'+esc(st.issue)+'</dd><dt>'+esc(s.k)+'</dt><dd>'+esc(cap(st.time))+'</dd></dl><div class="f">This is the kind of email that lands in your inbox. Nothing you typed was saved or sent.</div></div>';
+ctl.innerHTML='';var r=document.createElement('button');r.type='button';r.className='opt';r.textContent='Try another call';r.onclick=function(){start(key)};ctl.appendChild(r);
+var a=document.createElement('a');a.className='opt pr';a.href='#signup';a.textContent='I want this for my business';ctl.appendChild(a)},900)}
+Object.keys(S).forEach(function(k){var b=document.createElement('button');b.type='button';b.className='tab';b.dataset.k=k;b.textContent=S[k].n;b.onclick=function(){start(k)};tabs.appendChild(b)});
+start('plumbing');
+
+var calls=$('calls'),jv=$('jv'),cr=$('cr');
+function money(n){return'$'+Math.round(n).toLocaleString('en-AU')}
+function calc(){var c=+calls.value,v=+jv.value,p=+cr.value;
+$('o1').textContent=c;$('o2').textContent=money(v);$('o3').textContent=p+'%';
+var lost=c*52/12*(p/100)*v;$('lost').textContent=money(lost);
+$('verdict').textContent=lost>=299?'That’s about '+(lost/299).toFixed(1)+' times the $299 monthly price.':'At these numbers AnswerDeck may not pay for itself yet. Try your own figures.'}
+[calls,jv,cr].forEach(function(e){e.addEventListener('input',calc)});calc();
+
+if(DEMO_NUMBER){var a2=$('demoLink');a2.textContent=DEMO_NUMBER;a2.href='tel:'+DEMO_NUMBER.replace(/[^+\d]/g,'');a2.hidden=false}
+if(DEMO_AUDIO){var au=$('demoAudio');au.src=DEMO_AUDIO;au.hidden=false}
+if(DEMO_NUMBER||DEMO_AUDIO){$('dp').textContent=DEMO_NUMBER?'Call our demo line and talk to it like a customer.':'Listen to a real call handled by AnswerDeck.';if(DEMO_NUMBER&&DEMO_AUDIO)$('dp').textContent+=' Or listen to a recorded call.';$('demo').hidden=false}
+
+var f=$('f'),m=$('msg'),sb=$('sb');
+f.addEventListener('submit',async function(e){e.preventDefault();m.textContent='Sending…';sb.disabled=true;
+try{var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
+if(r.ok){f.reset();m.textContent='Thanks! We’ll contact you within one business day to set up your free trial.'}
+else{m.textContent='Something went wrong. Please try again or email ismoallim@gmail.com.'}}
+catch(x){m.textContent='No connection. Please try again.'}
+sb.disabled=false});
+var b=$('bar2'),s=$('signup');
+if('IntersectionObserver' in window){new IntersectionObserver(function(e){b.style.display=e[0].isIntersecting?'none':''}).observe(s)}
+</script>
+</body>
+</html>
