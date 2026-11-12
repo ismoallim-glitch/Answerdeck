@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base target="_top">
+<meta charset="utf-8">
+<style>
+:root{--bg:#f4f6f5;--card:#fff;--ink:#14231d;--muted:#5b6b64;--brand:#0b6b4f;--warn:#b45309;--line:#dfe6e2}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1714;--card:#17221e;--ink:#e8f0ec;--muted:#9fb2a9;--brand:#3fbf8f;--warn:#f59e0b;--line:#24332d}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:16px}
+h1{font-size:20px;margin:0 0 4px}h2{font-size:15px;margin:0 0 10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.sub{color:var(--muted);margin-bottom:16px}.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}.kpi .n{font-size:28px;font-weight:700}.kpi .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.row{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:12px}
+.bar{display:flex;align-items:center;gap:8px;margin:4px 0}.bar span:first-child{flex:0 0 42%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar i{display:block;height:10px;background:var(--brand);border-radius:5px}.bar b{font-weight:600;min-width:2ch}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{text-align:left;padding:6px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+a{color:var(--brand)}.status{font-weight:700}.warn{color:var(--warn)}.private{font-size:12px;color:var(--muted);margin-top:16px}
+</style>
+</head>
+<body>
+<h1>Recruitment Dashboard – Ismail Hassan</h1>
+<div class="sub" id="sub"></div>
+<div class="grid" id="kpis"></div>
+<div class="row">
+  <div class="card"><h2>System</h2><div id="health"></div></div>
+  <div class="card"><h2>Conversion rates</h2><div id="conv"></div></div>
+</div>
+<div class="row">
+  <div class="card"><h2>Leads by country</h2><div id="country"></div></div>
+  <div class="card"><h2>Leads by platform</h2><div id="platform"></div></div>
+  <div class="card"><h2>Most popular courses</h2><div id="course"></div></div>
+</div>
+<div class="row">
+  <div class="card"><h2>Follow-up reminders</h2><div id="follow"></div></div>
+  <div class="card"><h2>Recent enquiries</h2><div id="recent"></div></div>
+</div>
+<div class="row"><div class="card"><h2>Best public posts to review</h2><div id="opps"></div></div></div>
+<p class="private">Private page. Commission figures are for your eyes only and are never shown to students. Potential commission is not earned until QETC confirms eligibility and pays.</p>
+<script>
+var D = <?!= data ?>;
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function bars(list){if(!list.length)return '<p class="sub">No data yet</p>';var max=Math.max.apply(null,list.map(function(x){return x.count}));
+ return list.map(function(x){return '<div class="bar"><span title="'+esc(x.key)+'">'+esc(x.key)+'</span><i style="width:'+Math.max(4,Math.round(x.count/max*50))+'%"></i><b>'+x.count+'</b></div>'}).join('')}
+var k=D.kpis, money=function(n){return 'US$'+Number(n||0).toLocaleString()};
+document.getElementById('sub').textContent='Updated '+D.generated;
+document.getElementById('kpis').innerHTML=[
+ ['Total student leads',k.totalLeads],['New enquiries (7 days)',k.newEnquiries],['Qualified students',k.qualified],['Ready to apply',k.readyToApply],
+ ['Applications submitted',k.applicationsSubmitted],['Successful enrolments',k.enrolments],['Potential commission',money(k.potentialCommission)],['Commission received',money(k.commissionReceived)],
+ ['Posts to review',k.opportunitiesToReview],['Posts discovered',k.opportunitiesTotal]
+].map(function(x){return '<div class="card kpi"><div class="n">'+esc(x[1])+'</div><div class="l">'+esc(x[0])+'</div></div>'}).join('');
+var h=D.health;document.getElementById('health').innerHTML='<p class="status '+(/HEALTHY/.test(h.status)?'':'warn')+'">'+esc(h.status)+'</p><p>Last successful run: '+esc(h.lastSuccess)+'<br>Next scheduled run: '+esc(h.nextRun)+'<br>Emails left today: '+esc(h.mailQuotaRemaining)+'</p>';
+var c=D.conversion;document.getElementById('conv').innerHTML='<p>Enquiry → Qualified: <b>'+c.enquiryToQualified+'%</b><br>Qualified → Applied: <b>'+c.qualifiedToApplied+'%</b><br>Applied → Enrolled: <b>'+c.appliedToEnrolled+'%</b><br>Enquiry → Enrolled: <b>'+c.enquiryToEnrolled+'%</b></p>';
+document.getElementById('country').innerHTML=bars(D.byCountry);document.getElementById('platform').innerHTML=bars(D.byPlatform);document.getElementById('course').innerHTML=bars(D.byCourse);
+document.getElementById('follow').innerHTML=D.followUps.length?'<table>'+D.followUps.map(function(f){return '<tr><td>'+esc(f.due)+'</td><td><b>'+esc(f.name)+'</b><br>'+esc(f.action)+'</td><td>'+esc(f.status)+'</td></tr>'}).join('')+'</table>':'<p class="sub">Nothing due 🎉</p>';
+document.getElementById('recent').innerHTML=D.recent.length?'<table>'+D.recent.map(function(r){return '<tr><td>'+esc(r.date)+'</td><td><b>'+esc(r.name)+'</b> ('+esc(r.country)+')<br>'+esc(r.level)+' '+esc(r.course)+(r.dup?'<br><span class="warn">Possible duplicate: '+esc(r.dup)+'</span>':'')+'</td><td>'+esc(r.score)+'/100<br>'+esc(r.status)+'</td></tr>'}).join('')+'</table>':'<p class="sub">No enquiries yet</p>';
+document.getElementById('opps').innerHTML=D.topOpps.length?'<table>'+D.topOpps.map(function(o){return '<tr><td>'+esc(o.score)+'</td><td><a href="'+esc(o.link)+'" target="_blank" rel="noopener">'+esc(o.title)+'</a><br><span class="sub">'+esc(o.platform)+' · '+esc(o.community)+'</span></td></tr>'}).join('')+'</table>':'<p class="sub">No new posts to review</p>';
+</script>
+</body>
+</html>
