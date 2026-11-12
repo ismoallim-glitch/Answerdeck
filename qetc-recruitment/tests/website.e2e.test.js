@@ -119,7 +119,7 @@ test('chat assistant runs the full conversation and submits after consent', asyn
 
 test('without API_URL the site says so honestly instead of pretending', async () => {
   const page = await browser.newPage();
-  await wire(page, createEnv(), { API_URL: '', CONTACT_EMAIL: 'hello@example.com' });
+  await wire(page, createEnv(), { API_URL: '', WHATSAPP_NUMBER: '', CONTACT_EMAIL: 'hello@example.com' });
   await page.goto(base + '/index.html');
   await page.fill('#f-name', 'X'); await page.fill('#f-country', 'Ghana'); await page.fill('#f-email', 'x@example.com'); await page.check('input[name=consent]');
   await page.click('#enquiry-form button[type=submit]');

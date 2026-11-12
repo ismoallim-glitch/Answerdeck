@@ -47,7 +47,7 @@ test('full enquiry → CRM row, score 100, READY TO APPLY, qualified email + stu
   assert.equal(s['Status'], 'READY TO APPLY');
   assert.equal(s['Consent Status'], 'GIVEN');
   assert.match(s['Score Explanation'], /contact details provided/);
-  const toOwner = env.mails.find(m => m.to === 'owner@example.com');
+  const toOwner = env.mails.find(m => m.to === 'ismoallim@gmail.com');
   assert.ok(toOwner, 'owner notified');
   assert.match(toOwner.body, /^NEW QUALIFIED STUDENT/);
   assert.match(toOwner.body, /Name: Amina Test\nCountry: Kenya\nInterested in: Bachelor's\nPreferred course: Business Administration/);
@@ -74,7 +74,7 @@ test('partial enquiry gets a lower, explained score and missing fields are NOT i
   assert.equal(s['Status'], 'ENQUIRY SUBMITTED');
   assert.match(s['Score Explanation'], /course not provided/);
   assert.match(s['Score Explanation'], /budget not provided/);
-  const owner = env.mails.find(m => m.to === 'owner@example.com');
+  const owner = env.mails.find(m => m.to === 'ismoallim@gmail.com');
   assert.match(owner.subject, /^New student enquiry/);
 });
 

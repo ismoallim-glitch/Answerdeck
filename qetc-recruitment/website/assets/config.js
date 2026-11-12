@@ -9,10 +9,10 @@ window.SITE_CONFIG = {
   CONSULTANT_NAME: 'Ismail Hassan',
 
   // Your WhatsApp number in international format, digits only, e.g. '60123456789'. Leave '' to hide WhatsApp buttons.
-  WHATSAPP_NUMBER: '',
+  WHATSAPP_NUMBER: '254710540018',
 
   // Public contact email shown on the site. Leave '' to hide.
-  CONTACT_EMAIL: '',
+  CONTACT_EMAIL: 'ismoallim@gmail.com',
 
   // VERIFY: set to true only after QETC confirms the current packages, prices and conditions in writing.
   PACKAGES_VERIFIED: false,

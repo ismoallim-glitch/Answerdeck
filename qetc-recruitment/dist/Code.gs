@@ -18,7 +18,7 @@ const CONFIG = {
   PARTNER_LINE: 'QETC Malaysia Recruitment Partner',
 
   // Where alerts go. Leave '' to use the Google account that owns the script.
-  NOTIFY_EMAIL: '',
+  NOTIFY_EMAIL: 'ismoallim@gmail.com',
 
   // Your public website address (used in emails and draft replies).
   WEBSITE_URL: '',
